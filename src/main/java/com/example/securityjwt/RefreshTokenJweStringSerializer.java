@@ -16,7 +16,7 @@ public class RefreshTokenJweStringSerializer implements Function<Token, String> 
     private EncryptionMethod encryptionMethod = EncryptionMethod.A128GCM;
     private static final Logger LOGGER = LoggerFactory.getLogger(RefreshTokenJweStringSerializer.class);
 
-    public RefreshTokenJweStringSerializer(JWEEncrypter jweEncrypter, JWEAlgorithm jweAlgorithm, EncryptionMethod encryptionMethod) {
+    public RefreshTokenJweStringSerializer(JWEEncrypter jweEncrypter) {
         this.jweEncrypter = jweEncrypter;
         this.jweAlgorithm = jweAlgorithm;
         this.encryptionMethod = encryptionMethod;

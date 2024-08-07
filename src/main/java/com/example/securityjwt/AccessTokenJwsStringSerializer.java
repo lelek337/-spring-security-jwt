@@ -10,14 +10,13 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Date;
 import java.util.function.Function;
-import java.util.logging.Logger;
 
 public class AccessTokenJwsStringSerializer implements Function<Token, String> {
 
     private final JWSSigner jwsSigner;
     private JWSAlgorithm jwsAlgorithm;
 
-    public AccessTokenJwsStringSerializer(JWSSigner jwsSigner, JWSAlgorithm jwsAlgorithm) {
+    public AccessTokenJwsStringSerializer(JWSSigner jwsSigner) {
         this.jwsSigner = jwsSigner;
         this.jwsAlgorithm = jwsAlgorithm;
     }
@@ -44,6 +43,7 @@ public class AccessTokenJwsStringSerializer implements Function<Token, String> {
         }
         return null;
     }
+
 
     public void setJwsAlgorithm(JWSAlgorithm jwsAlgorithm) {
         this.jwsAlgorithm = jwsAlgorithm;

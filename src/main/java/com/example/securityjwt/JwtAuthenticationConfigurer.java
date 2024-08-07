@@ -28,12 +28,12 @@ public class JwtAuthenticationConfigurer extends AbstractHttpConfigurer<JwtAuthe
         filter.setRefreshTokenSerializer(this.refreshTokenSerializer);
     }
 
-    public JwtAuthenticationConfigurer RefreshTokenSerializer(Function<Token, String> refreshTokenSerializer) {
+    public JwtAuthenticationConfigurer refreshTokenSerializer(Function<Token, String> refreshTokenSerializer) {
         this.refreshTokenSerializer = refreshTokenSerializer;
         return this;
     }
 
-    public JwtAuthenticationConfigurer AccessTokenSerializer(Function<Token, String> accessTokenSerializer) {
+    public JwtAuthenticationConfigurer accessTokenSerializer(Function<Token, String> accessTokenSerializer) {
         this.accessTokenSerializer = accessTokenSerializer;
         return this;
     }
